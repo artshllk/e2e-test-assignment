@@ -46,17 +46,17 @@ systima-e2e/
 
 ### Install dependencies
 
-\`\`\`bash
+```bash
 pnpm install
-\`\`\`
+```
 
 ### Set environment variables
 
 Create a \`.env\` file in the root of the project and add:
 
-\`\`\`env
+```env
 BASE_URL=https://app.staging.systima.no/systimaas7/dashboard
-\`\`\`
+```
 
 ---
 
@@ -64,27 +64,27 @@ BASE_URL=https://app.staging.systima.no/systimaas7/dashboard
 
 ### Run all tests
 
-\`\`\`bash
+```bash
 pnpm pw
-\`\`\`
+```
 
 ### Run tests in UI mode
 
-\`\`\`bash
+```bash
 pnpm pw:ui
-\`\`\`
+```
 
 ### Run tests with debug mode
 
-\`\`\`bash
+```bash
 pnpm pw:debug
-\`\`\`
+```
 
 ### Show HTML report after tests
 
-\`\`\`bash
+```bash
 pnpm pw:report
-\`\`\`
+```
 
 ---
 
@@ -123,6 +123,6 @@ pnpm pw:report
 
 Clone, install, and run the tests with one command:
 
-\`\`\`bash
+```bash
 pnpm install && pnpm pw
-\`\`\`
+```
