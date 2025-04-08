@@ -4,7 +4,6 @@ export class LoginPage {
   constructor(private page: Page) {}
 
   async gotoLoginPage() {
-    // temprorary url
     await this.page.goto("https://app.staging.systima.no/systimaas7/dashboard");
     await this.page.waitForLoadState("domcontentloaded");
   }
