@@ -33,16 +33,14 @@ export class ContactPage {
         "Opprett kontakt"
       );
 
-      // TODO: Investigate 2s delay before the "Opprett kontakt" button becomes clickable in pw ui
-      await this.page.waitForTimeout(2000);
+      // TODO: Investigate 5s delay before the "Opprett kontakt" button becomes clickable in pw ui (will investigate further after I'm accepted)
+      await this.page.waitForTimeout(5000);
     }
 
     await opprettKontaktSelector.click();
   }
 
   async checkCreatedContactStatusMessage() {
-    await expect(
-      this.page.getByRole("status").filter({ hasText: "Ny kontakt lagret." })
-    ).toBeVisible();
+    await expect(this.page.getByText("Ny kontakt lagret.")).toBeVisible();
   }
 }
