@@ -10,11 +10,6 @@ export class PurchasePage {
     await this.page.waitForLoadState("domcontentloaded");
   }
 
-  async visitPurchaseFormManually() {
-    await this.page.getByRole("button", { name: "Systima AS" }).click();
-    await this.page.getByRole("option", { name: "Systima AS" }).click();
-  }
-
   async clickMenuItem(name: string) {
     await this.page.getByRole("button", { name, exact: true }).click();
   }
@@ -70,6 +65,19 @@ export class PurchasePage {
     const optionName = this.page.getByRole("option", { name });
     await expect(optionName).toBeVisible();
     await optionName.click();
+  }
+
+  async fillInvoiceNumber(amount: string) {
+    const invoiceNumberInput = this.page.getByRole("textbox", {
+      name: "Fakturanr.",
+    });
+    await expect(invoiceNumberInput).toBeVisible();
+    await invoiceNumberInput.fill(amount);
+  }
+
+  async checkInvoiceNumberValidationError() {
+    const redText = this.page.locator("text=Fakturanr. er allerede bokført");
+    await expect(redText).toBeVisible();
   }
 
   async fillDates(
