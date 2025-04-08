@@ -16,7 +16,7 @@ The goal of this assignment was to:
 
 ## 📁 Project Structure
 
-\`\`\`
+```
 systima-e2e/
 ├── pages/                  # Page Object Models for reusable selectors & actions
 │   ├── ContactPage.ts
@@ -34,7 +34,7 @@ systima-e2e/
 ├── playwright.config.ts   # Playwright configuration file
 ├── package.json
 └── README.md
-\`\`\`
+```
 
 ---
 
