@@ -1,10 +1,11 @@
 import { expect, Page } from "@playwright/test";
+import { config } from "../utils/config";
 
 export class LoginPage {
   constructor(private page: Page) {}
 
   async gotoLoginPage() {
-    await this.page.goto("https://app.staging.systima.no/systimaas7/dashboard");
+    await this.page.goto(config.baseURL);
     await this.page.waitForLoadState("domcontentloaded");
   }
 
@@ -26,15 +27,5 @@ export class LoginPage {
     const loginBtn = this.page.getByRole("button", { name: "Logg inn" });
     await expect(loginBtn).toBeEnabled();
     await loginBtn.click();
-  }
-
-  async assertDashboard() {
-    await expect(
-      this.page.getByRole("link", { name: "Logg ut" })
-    ).toBeVisible();
-    await expect(this.page.getByRole("navigation")).toBeVisible();
-    await expect(
-      this.page.getByRole("button", { name: "Nytt selskap" })
-    ).toBeVisible();
   }
 }

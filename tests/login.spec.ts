@@ -1,5 +1,6 @@
 import { expect, test } from "@playwright/test";
 import { LoginPage } from "../pages/LoginPage";
+import { assertDashboard } from "../utils/helpers";
 
 test.describe("Login Tests", () => {
   test("Successful Login", async ({ page }) => {
@@ -9,7 +10,7 @@ test.describe("Login Tests", () => {
     await loginPage.enterPassword("123456789");
     await loginPage.clickLoginButton();
 
-    await loginPage.assertDashboard();
+    await assertDashboard(page);
   });
 
   test("Failed Login", async ({ page }) => {
