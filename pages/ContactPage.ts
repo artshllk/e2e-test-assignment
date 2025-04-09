@@ -33,7 +33,7 @@ export class ContactPage {
         "Opprett kontakt"
       );
 
-      // TODO: Investigate 5s delay before the "Opprett kontakt" button becomes clickable in pw ui (will investigate further after I'm accepted)
+      // TODO: Investigate 5s delay before the "Opprett kontakt" button becomes clickable in pw ui
       await this.page.waitForTimeout(5000);
     }
 
