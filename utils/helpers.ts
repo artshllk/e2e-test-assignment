@@ -23,7 +23,7 @@ export async function clickLinkMenuItem(page: Page, name: MenuLinks) {
 export async function assertDashboard(page: Page) {
   await page.locator(".header-backup").waitFor();
   await expect(page.getByRole("link", { name: "Logg ut" })).toBeVisible({
-    timeout: 8000,
+    timeout: 7000,
   });
   await expect(page.getByRole("navigation")).toBeVisible();
   await expect(
