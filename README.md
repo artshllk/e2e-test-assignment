@@ -50,15 +50,35 @@ e2e-test-assignment/
 pnpm install
 ```
 
-### Set environment variables
+## 🌱 Environment Setup
 
-Create a \`.env\` file in the root of the project and add:
-
-```env
-BASE_URL=https://app.staging.systima.no/systimaas7/dashboard
-```
+This project uses a `.env` file to store environment-specific variables for flexibility and ease of configuration.
 
 ---
+
+### 📄 Setup Instructions
+
+1. **Copy the example environment file:**
+
+   ```bash
+   cp .env.example .env
+   ```
+
+2. **Open the newly created `.env` file** and update the `BASE_URL` with the URL of your own test or staging environment:
+
+   ```env
+   BASE_URL=https://your-staging-url.com/dashboard
+   ```
+
+---
+
+### 📌 Important Note
+
+> 🛑 **The original staging environment URL and company details have been intentionally anonymized for privacy reasons.**  
+>  
+> If you’d like more context about the original setup or have any questions, feel free to reach out — I’d be happy to chat!
+
+
 
 ## 🚀 Running Tests
 
