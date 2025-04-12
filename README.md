@@ -1,6 +1,6 @@
-# Systima E2E Test Assignment
+# E2E Test Assignment
 
-This project is an end-to-end (E2E) test suite built using [Playwright](https://playwright.dev/) with TypeScript for testing key user flows on the [Systima](https://app.staging.systima.no/) platform.
+This project is an end-to-end (E2E) test suite built using [Playwright](https://playwright.dev/) with TypeScript for testing key user flows on a sample staging platform.
 
 ---
 
@@ -17,7 +17,7 @@ The goal of this assignment was to:
 ## 📁 Project Structure
 
 ```
-systima-e2e/
+e2e-test-assignment/
 ├── pages/                  # Page Object Models for reusable selectors & actions
 │   ├── ContactPage.ts
 │   ├── LoginPage.ts
